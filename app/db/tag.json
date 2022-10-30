@@ -1,0 +1,42 @@
+[
+    {
+        "id":1,
+        "name": "javascript"
+    },
+    {
+        "id":2,
+        "name": "nodejs"
+    },
+    {
+        "id":3,
+        "name": "react"
+    },
+    {
+        "id":4,
+        "name": "postgresql"
+    },
+    {
+        "id":5,
+        "name": "nestjs"
+    },
+    {
+        "id":6,
+        "name": "sql"
+    },
+    {
+        "id":7,
+        "name": "nextjs"
+    },
+    {
+        "id":8,
+        "name": "graphql"
+    },
+    {
+        "id":9,
+        "name": "html"
+    },
+    {
+        "id":10,
+        "name": "css"
+    }
+]

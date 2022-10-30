@@ -1,0 +1,38 @@
+//~ Fonts
+@font-face {
+    font-family: "Fasthand";
+    src:
+        local("Fasthand-Regular"),
+        local("Fasthand"),
+        /*careful, the path is from css folder*/
+        url("../../fonts/fasthand/Fasthand-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src:
+        local("Montserrat-Thin"),
+        local("Montserrat Thin"),
+        /*careful, the path is from css folder*/
+        url("../../fonts/montserrat/Montserrat-VariableFont_wght.ttf");
+}
+
+$font-fasthand: "Fasthand", sans-serif;
+$font-montserrat: "Montserrat", sans-serif;
+
+//~Light Colors
+$light-01: #fff;
+$light-02: #c5cddb;
+$light-03: #DCDACA;
+$light-04: #E8E6DC;
+
+//~Dark Colors
+$dark-01: #1c1922;
+$dark-02: #171923;
+$dark-03: #232535;
+$dark-04: #3D3D3D;
+$dark-05: #202020;
+$dark-06: #c3c3c3;
+
+//~Colors
+$color-01: #dca7ff

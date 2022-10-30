@@ -1,0 +1,179 @@
+@use './vars.scss';
+@use './mixins.scss';
+
+//~ Main 
+body {
+    font-family: vars.$font-montserrat;
+    width: 100%;
+
+    & h1 {
+        font-size: 1.5em;
+        padding: 0.5em;
+    }
+
+    & a {
+        text-decoration: none;
+        color: vars.$dark-01;
+    }
+}
+
+//~ Header
+.header {
+    margin: 1em 2em;
+    border-bottom: 0.5px solid vars.$dark-06;
+    @include mixins.flexbox(space-between, center);
+
+    &__navbar {
+        ul {
+            @include mixins.flexbox(space-between, center);
+
+            li {
+                padding: 0 0.15em 0.5em;
+                margin: 0.75em;
+                transition: all ease-in-out 0.15s;
+                border-bottom: 0px solid vars.$dark-03;
+            }
+            
+            
+            li:hover {
+                transform: scale(1.05);
+                border-bottom: 0.75px solid vars.$dark-03;
+            }
+
+        }
+    }
+
+    &__logo {
+        & a {
+            @include mixins.flexbox(space-between, center, column);
+        }
+
+        & h1 {
+            position: relative;
+            left: 3.1em;
+        }
+
+        & .deco {
+            font-family: vars.$font-fasthand;
+            font-size: 4em;
+            position: relative;
+            top: -0.5em;
+        }
+
+    }
+}
+
+
+//~ Main container
+.container {
+    @include mixins.flexbox(center, center, column);
+    //boxmodel
+    margin: 0 5em;
+    padding-bottom: 10em;
+
+    //& Slug
+    &__slug {
+        @include mixins.flexbox(center, center, column);
+        width: 90%;
+        margin: 1em 0 6em;
+
+        &__title {
+            //font
+            font-weight: bold;
+            font-size: 2em;
+            //boxmodel
+            padding: 1em 0;
+        }
+
+        &__content {
+            //font
+            font-style: italic;
+            //boxmodel
+            text-align: center;
+        }
+
+    }
+
+    // --- HOME PAGE
+    &__theme {
+        @include mixins.flexbox(space-between, center);
+        //display
+        width: 90%;
+        //boxmodel
+        border: 1px solid vars.$dark-01 ;
+        padding: 1.25em;
+        margin: 1.5em;
+    }
+
+    &__title {
+        font-family: vars.$font-fasthand;
+        font-size: 1.5em;
+        //display
+        display: block;
+        width: 100%;
+        //boxmodel
+        margin: 0 1em 0 1em;
+
+    }
+
+    &__content {
+        padding: 0 3em;
+        border-left: 1px solid vars.$dark-06;
+    }
+
+
+}
+
+// --- CARDS
+.cards-container {
+    @include mixins.flexbox(space-evenly, center, row);
+    flex-wrap: wrap;
+
+    &__card {
+        //boxmodel
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 1.5em;
+        margin: 1em;
+        transition: ease 0.25s;
+    }
+
+    &__card:hover {
+        transform: scale(1.15) translateY(-5px);
+
+    }
+}
+
+
+
+//& MEDIA QUERIES HEADER
+@media screen and (max-width: 768px) {
+    .header {
+        ul {
+            @include mixins.flexbox(center, center, column);
+        }
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        @include mixins.flexbox(center, center, column);
+    }
+
+}
+
+//~ Footer
+.footer {
+    @include mixins.flexbox(center, center);
+    font-size: 0.75em;
+    color: vars.$light-01;
+    background-color: vars.$dark-03;
+    //display
+    height: 5rem;
+    //boxmodel
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+
+}

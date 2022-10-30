@@ -1,0 +1,15 @@
+<%- include('../partials/header.ejs', {css:"./style/css", js:"./js"}) %>
+
+
+<main class="container">
+    <%- include('../partials/slug.ejs') %>
+
+      <!-- Display all cards -->
+  <section class="cards-container">
+    <% for( const tag of tags ) { %> 
+        <%- include('../partials/cards.ejs', {path:`categories/`, data: tag}) %> 
+    <% } %>
+</section>
+</main>
+
+<%- include('../partials/footer.ejs') %>

@@ -1,0 +1,13 @@
+<%- include('../partials/header.ejs', {css:"../../style/css", js:"../../js"}) %>
+
+<main class="container">
+
+  <!-- Display all cards -->
+  <section class="cards-container">
+    <p><%= article.title %> </p>
+    <p><%= article.content %> </p>
+    <p><%= article.created_at %> </p>
+  </section>
+</main>
+
+<%- include('../partials/footer.ejs') %>

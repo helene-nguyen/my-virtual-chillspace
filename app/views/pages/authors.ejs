@@ -1,0 +1,14 @@
+<%- include('../partials/header.ejs', {css:"./style/css", js:"./js"}) %>
+
+<main class="container">
+    <%- include('../partials/slug.ejs') %>
+
+      <!-- Display all cards -->
+  <section class="cards-container">
+    <% for( const author of authors ) { %> 
+        <%- include('../partials/cards.ejs', {path:`authors/`, data: author}) %> 
+    <% } %>
+</section>
+</main>
+
+<%- include('../partials/footer.ejs') %>

@@ -1,0 +1,21 @@
+<%- include('../partials/header.ejs', {css:"./style/css", js:"./js"}) %>
+
+
+<main class="container">
+
+    <%- include('../partials/slug.ejs') %>
+
+    <% for( const theme of themes ) { %>
+    <article class="container__theme">
+        <h2 class="container__title">
+            <a href="/<%= theme.name.toLowerCase() %>"><%= theme.name %></a>
+        </h2> 
+        <p class="container__content">
+            <%= theme.content %>
+        </p>
+    </article>
+        <% } %>
+        
+    </main>
+    
+    <%- include('../partials/footer.ejs')  %> 

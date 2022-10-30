@@ -1,0 +1,13 @@
+<section class="container__slug">
+  <% if (url === '/') { %>
+    <!--& Home page -->
+  <h3 class="container__slug__title">Lorem</h3>
+  <p class="container__slug__content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+  <% } %>
+
+  <% for( const theme of themes ) { %> <% if (url.match(theme.name.toLowerCase())) { %>
+    <!--& Other pages -->
+  <h3 class="container__slug__title"><%= theme.name %></h3>
+  <p class="container__slug__content"><%= theme.slug %></p>
+  <% } %> <% } %>
+</section>

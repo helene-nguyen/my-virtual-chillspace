@@ -1,0 +1,7 @@
+<nav class="header__navbar">
+  <ul>
+    <% for( const theme of themes ) { %>
+    <li><a href="/<%= theme.name.toLowerCase() %> "><%= theme.name %> </a></li>
+    <% } %>
+  </ul>
+</nav>
